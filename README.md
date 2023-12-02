@@ -1,53 +1,42 @@
-# Financial-Technology-Bootcamp
+# Financial-Analysis-with-Pandas
+## Challenge 3 - University of Berkeley Financial Technology Boot Camp
+This code uses historical trade data for Bitcoin on two exchanges, Bitstamp and Coinbase, to determine if any arbitrage opportunities exist for Bitcoin. The analysis is divided into three phases: collecting the data, preparing the data, and analyzing the data.
 
-### Financial Programing
-#### In this boot camp, I acquired practical skills in financial programming and utilized Python and Pandas for data manipulation and analysis in financial projects. Here are some highlights:
-- Applied Python programming skills and utilized Pandas for data manipulation and analysis in financial projects, resulting in improved data accuracy and actionable insights.
-- Implemented statistical modeling techniques in finance to uncover patterns, forecast trends, and make informed investment decisions, leading to increased profitability.
-- Integrated APIs into Python applications to access real-time financial data, ensuring accurate and timely analysis for investment strategies and risk assessment.
-- Utilized SQL for data retrieval from databases, enabling efficient access to financial information and facilitating data-driven decision-making.
-- Leveraged Python libraries for financial analysis, such as NumPy, matplotlib, and SciPy, to expedite analysis workflows and deliver comprehensive reports and visualizations.
+### Part 1: Collect the Data
+To collect the data needed for analysis, the following steps are taken:
 
-| Challenges |
-|------------|
-| [Financial Programming with Python](https://github.com/DiegoFavela01/Financial-Programming-with-Python) |
-| [Financial Applications with Python](https://github.com/DiegoFavela01/Financial-Applications-with-Python) |
-| [Financial Analysis with Pandas](https://github.com/DiegoFavela01/Financial-Analysis-with-Pandas) |
-| [Quantitative Analysis with Pandas](https://github.com/DiegoFavela01/Quantitative-Analysis-with-Pandas) |
-| [Financial Simulation with APIs](https://github.com/DiegoFavela01/Financial-Simulation-with-APIs) |
-| [Data Visualization with PyViz](https://github.com/DiegoFavela01/Data-Visualization-with-PyViz) |
-| [Financial Databases with SQL](https://github.com/DiegoFavela01/Financial-Databases-with-SQL) |
+The read_csv function from the Pandas library and the Path module are used to import the data from bitstamp.csv and create a DataFrame called bitstamp. The DatetimeIndex is set as the Timestamp column, and the dates are parsed and formatted.
+The head and/or tail function is used to confirm that Pandas properly imported the data.
+The same steps are repeated for the coinbase.csv file.
 
+### Part 2: Prepare the Data
+To prepare and clean the data for analysis, the following steps are taken:
 
-### Machine Learning Applications in Finance
-#### During the boot camp, I also gained expertise in machine learning applications in finance. Here are some key areas I focused on:
-- Applied machine learning techniques in finance to develop algorithmic trading strategies, resulting in improved portfolio performance and increased profitability.
-- Utilized predictive modeling to forecast financial trends and classify financial data, enabling accurate risk assessment and informed decision-making.
-- Employed unsupervised learning techniques, such as clustering and dimensionality reduction, to identify market segments and reduce the complexity of financial data for enhanced analysis.
-- Implemented ensemble methods to combine multiple machine learning models, improving prediction accuracy and robustness in financial modeling tasks.
-- Successfully deployed machine learning models in finance, integrating them into existing systems to automate processes and optimize workflows.
+For the bitstamp DataFrame, all NaN values are replaced or dropped.
+The str.replace function is used to remove the dollar signs from the Close column.
+The data type of the Close column is converted to float.
+Duplicated values are reviewed, and they are dropped if necessary.
+The same steps are repeated for the coinbase DataFrame.
+### Part 3:  Analyze the Data
+The analysis consists of the following tasks:
 
-| Challenges |
-|------------|
-| [Unsupervised Learning](https://github.com/DiegoFavela01/Unsupervised-Learning) |
-| [Time Series](https://github.com/DiegoFavela01/Time-Series) |
-| [Supervised Learning](https://github.com/DiegoFavela01/Supervised-Learning) |
-| [Neural Networks](https://github.com/DiegoFavela01/Neural-Networks) |
-| [Algorithmic Trading](https://github.com/DiegoFavela01/Algorithmic-Trading) |
-| [Robo Advisors](https://github.com/DiegoFavela01/Robo-Advisors) |
+1. Choosing the columns of data to focus on.
+2. Getting the summary statistics and plotting the data.
+3. Focusing on specific dates.
+4. Calculating the arbitrage profits.
 
-### Blockchain and Cryptocurrency
-#### In addition to finance and machine learning, I have also explored blockchain and cryptocurrency concepts. Here's what I've accomplished:
-- Developed and deployed smart contracts on the Ethereum blockchain platform, ensuring accuracy and efficiency in transaction handling and contract execution.
-- Utilized Solidity programming language to implement custom smart contracts, incorporating business logic and security measures to address specific requirements.
-- Demonstrated understanding of consensus algorithms, including proof of work (PoW) and proof of stake (PoS), and their implications for blockchain networks.
-- Implemented cryptocurrency and distributed ledger concepts to develop decentralized applications (dApps), providing transparency, immutability, and security for financial operations.
-- Leveraged the Truffle suite, including Truffle framework, Ganache, and Drizzle, to streamline and automate blockchain development processes, improving productivity and code quality.
+## Libraries and Dependencies
+This code uses the following libraries:
 
-| Challenges |
-|------------------------------------|
-| [Blockchain with Python](https://github.com/DiegoFavela01/Blockchain-with-Python) |
-| [Blockchain Wallets](https://github.com/DiegoFavela01/Blockchain-Wallets)         |
-| [Smart Contracts with Solidity](https://github.com/DiegoFavela01/Smart-Contracts-with-Solidity) |
-| [Tokenomics](https://github.com/DiegoFavela01/Tokenomics)                          |
-
+- Pandas
+- Pathlib
+- Numpy
+- %Matplotlib
+####  To install these libraries
+```bash
+!pip install pandas
+!pip install pathlib
+!pip install numpy
+```
+###  Running the Code
+To run the code, open a Jupyter Notebook or JupyterLab session and run each cell of the code sequentially. Make sure that the necessary CSV files (bitstamp.csv and coinbase.csv) are in the same directory as the Jupyter Notebook file.
