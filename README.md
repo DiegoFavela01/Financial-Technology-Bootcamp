@@ -1,53 +1,43 @@
-# Financial-Technology-Bootcamp
+# Quantitative-Analysis-with-Pandas
+## Challenge 4 - University of Berkeley Financial Technology Boot Camp 
+This code involves a quantitative analysis of daily returns of four whale investors' portfolios and the S&P 500 index. The analysis includes the following components:
+The analysis includes the following components:
 
-### Financial Programing
-#### In this boot camp, I acquired practical skills in financial programming and utilized Python and Pandas for data manipulation and analysis in financial projects. Here are some highlights:
-- Applied Python programming skills and utilized Pandas for data manipulation and analysis in financial projects, resulting in improved data accuracy and actionable insights.
-- Implemented statistical modeling techniques in finance to uncover patterns, forecast trends, and make informed investment decisions, leading to increased profitability.
-- Integrated APIs into Python applications to access real-time financial data, ensuring accurate and timely analysis for investment strategies and risk assessment.
-- Utilized SQL for data retrieval from databases, enabling efficient access to financial information and facilitating data-driven decision-making.
-- Leveraged Python libraries for financial analysis, such as NumPy, matplotlib, and SciPy, to expedite analysis workflows and deliver comprehensive reports and visualizations.
+- Performance
+- Volatility
+- Risk
+- Risk-return profile
+- Portfolio diversification
+### Part 1: Importing the Data
+To begin the analysis, the whale_navs.csv file was read into a Pandas DataFrame. A DateTimeIndex was created for the DataFrame and the head of the DataFrame was reviewed. Then, a daily returns DataFrame was created using the Pandas pct_change function and dropna on the NAV prices of the four portfolios and the closing price of the S&P 500 Index.
 
-| Challenges |
-|------------|
-| [Financial Programming with Python](https://github.com/DiegoFavela01/Financial-Programming-with-Python) |
-| [Financial Applications with Python](https://github.com/DiegoFavela01/Financial-Applications-with-Python) |
-| [Financial Analysis with Pandas](https://github.com/DiegoFavela01/Financial-Analysis-with-Pandas) |
-| [Quantitative Analysis with Pandas](https://github.com/DiegoFavela01/Quantitative-Analysis-with-Pandas) |
-| [Financial Simulation with APIs](https://github.com/DiegoFavela01/Financial-Simulation-with-APIs) |
-| [Data Visualization with PyViz](https://github.com/DiegoFavela01/Data-Visualization-with-PyViz) |
-| [Financial Databases with SQL](https://github.com/DiegoFavela01/Financial-Databases-with-SQL) |
+### Part 2: Analyzing the Performance
+The data was analyzed to determine if any of the portfolios outperformed the S&P 500. This was done by visualizing the daily return data of the four fund portfolios and the S&P 500 using the default Pandas plot function. The cumulative returns for the four fund portfolios and the S&P 500 were calculated using the Pandas cumprod function and visualized using the default Pandas plot function.
 
+### Part 3: Analyzing the Volatility
+The volatility of each of the four fund portfolios and of the S&P 500 Index was analyzed by using box plots. Daily return data was visualized for each of the four portfolios and for the S&P 500 using the Pandas plot function with kind="box" parameter. A new DataFrame was created containing the data for just the four fund portfolios by dropping the S&P 500 column. Daily return data was visualized for just the four fund portfolios using another box plot.
 
-### Machine Learning Applications in Finance
-#### During the boot camp, I also gained expertise in machine learning applications in finance. Here are some key areas I focused on:
-- Applied machine learning techniques in finance to develop algorithmic trading strategies, resulting in improved portfolio performance and increased profitability.
-- Utilized predictive modeling to forecast financial trends and classify financial data, enabling accurate risk assessment and informed decision-making.
-- Employed unsupervised learning techniques, such as clustering and dimensionality reduction, to identify market segments and reduce the complexity of financial data for enhanced analysis.
-- Implemented ensemble methods to combine multiple machine learning models, improving prediction accuracy and robustness in financial modeling tasks.
-- Successfully deployed machine learning models in finance, integrating them into existing systems to automate processes and optimize workflows.
+### Part 4: Analyzing the Risk
+The risk profile of each portfolio was evaluated by using the standard deviation and the beta. The Pandas std function was used to calculate the standard deviation for each of the four portfolios and for the S&P 500. The annualized standard deviation was calculated for each of the four portfolios and for the S&P 500. The daily returns DataFrame and a 21-day rolling window were used to plot the rolling standard deviations of the four fund portfolios and of the S&P 500 index. The daily returns DataFrame and a 21-day rolling window were used to plot the rolling standard deviations of only the four fund portfolios.
 
-| Challenges |
-|------------|
-| [Unsupervised Learning](https://github.com/DiegoFavela01/Unsupervised-Learning) |
-| [Time Series](https://github.com/DiegoFavela01/Time-Series) |
-| [Supervised Learning](https://github.com/DiegoFavela01/Supervised-Learning) |
-| [Neural Networks](https://github.com/DiegoFavela01/Neural-Networks) |
-| [Algorithmic Trading](https://github.com/DiegoFavela01/Algorithmic-Trading) |
-| [Robo Advisors](https://github.com/DiegoFavela01/Robo-Advisors) |
+### Part 5: Analyzing the Risk-Return Profile
+The Sharpe ratios for each portfolio were calculated to determine the overall risk of an asset or portfolio. The daily return DataFrame was used to calculate the annualized average return data for the four fund portfolios and for the S&P 500. The Sharpe ratios were calculated for the four fund portfolios and for the S&P 500. The Sharpe ratios were visualized for the four funds and for the S&P 500 in a bar chart.
 
-### Blockchain and Cryptocurrency
-#### In addition to finance and machine learning, I have also explored blockchain and cryptocurrency concepts. Here's what I've accomplished:
-- Developed and deployed smart contracts on the Ethereum blockchain platform, ensuring accuracy and efficiency in transaction handling and contract execution.
-- Utilized Solidity programming language to implement custom smart contracts, incorporating business logic and security measures to address specific requirements.
-- Demonstrated understanding of consensus algorithms, including proof of work (PoW) and proof of stake (PoS), and their implications for blockchain networks.
-- Implemented cryptocurrency and distributed ledger concepts to develop decentralized applications (dApps), providing transparency, immutability, and security for financial operations.
-- Leveraged the Truffle suite, including Truffle framework, Ganache, and Drizzle, to streamline and automate blockchain development processes, improving productivity and code quality.
+### Part 6: Diversifying the Portfolio
+To evaluate how the portfolios react relative to the broader market, the variance of the S&P 500 was calculated using a 60-day rolling window. Then, for each of the two portfolios chosen, the covariance and beta were calculated using the 60-day rolling window, the daily return data, and the S&P 500 returns. The average value of the 60-day rolling beta of the portfolio was calculated and plotted.
 
-| Challenges |
-|------------------------------------|
-| [Blockchain with Python](https://github.com/DiegoFavela01/Blockchain-with-Python) |
-| [Blockchain Wallets](https://github.com/DiegoFavela01/Blockchain-Wallets)         |
-| [Smart Contracts with Solidity](https://github.com/DiegoFavela01/Smart-Contracts-with-Solidity) |
-| [Tokenomics](https://github.com/DiegoFavela01/Tokenomics)                          |
+## Libraries and Dependencies
+This code uses the following libraries:
 
+- Pandas
+- Pathlib
+- Numpy
+- %Matplotlib
+####  To install these libraries
+```bash
+!pip install pandas
+!pip install pathlib
+!pip install numpy
+```
+###  Running the Code
+To run the code, open a Jupyter Notebook or JupyterLab session and run each cell of the code sequentially. Make sure that the necessary CSV file (whale_nav.csv) are in the same directory as the Jupyter Notebook file.
