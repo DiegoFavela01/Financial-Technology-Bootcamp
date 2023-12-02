@@ -1,53 +1,55 @@
-# Financial-Technology-Bootcamp
+# Financial-Databases-with-SQL
+## Challenge 7 - University of Berkeley Financial Technology Boot Camp
+### Part 1: Import the Data
+The cryptocurrency data is loaded from the CSV file using pandas.
 
-### Financial Programing
-#### In this boot camp, I acquired practical skills in financial programming and utilized Python and Pandas for data manipulation and analysis in financial projects. Here are some highlights:
-- Applied Python programming skills and utilized Pandas for data manipulation and analysis in financial projects, resulting in improved data accuracy and actionable insights.
-- Implemented statistical modeling techniques in finance to uncover patterns, forecast trends, and make informed investment decisions, leading to increased profitability.
-- Integrated APIs into Python applications to access real-time financial data, ensuring accurate and timely analysis for investment strategies and risk assessment.
-- Utilized SQL for data retrieval from databases, enabling efficient access to financial information and facilitating data-driven decision-making.
-- Leveraged Python libraries for financial analysis, such as NumPy, matplotlib, and SciPy, to expedite analysis workflows and deliver comprehensive reports and visualizations.
+### Part 2: Prepare the Data
+The cryptocurrency data is cleaned and preprocessed to remove any missing or duplicate values, and to convert categorical data to numerical data.
 
-| Challenges |
-|------------|
-| [Financial Programming with Python](https://github.com/DiegoFavela01/Financial-Programming-with-Python) |
-| [Financial Applications with Python](https://github.com/DiegoFavela01/Financial-Applications-with-Python) |
-| [Financial Analysis with Pandas](https://github.com/DiegoFavela01/Financial-Analysis-with-Pandas) |
-| [Quantitative Analysis with Pandas](https://github.com/DiegoFavela01/Quantitative-Analysis-with-Pandas) |
-| [Financial Simulation with APIs](https://github.com/DiegoFavela01/Financial-Simulation-with-APIs) |
-| [Data Visualization with PyViz](https://github.com/DiegoFavela01/Data-Visualization-with-PyViz) |
-| [Financial Databases with SQL](https://github.com/DiegoFavela01/Financial-Databases-with-SQL) |
+### Part 3: Find the Best Value for k Using the Original Data
+- The elbow method is used to determine the optimal number of clusters to use for clustering the data using the K-means algorithm.
+- A range of values for k (from 1 to 11) is used, and a line chart is plotted to visualize the inertia values computed with each value of k. 
+- The optimal value of k is determined by identifying the "elbow" point in the line chart, which represents the point of diminishing returns for adding more clusters.
 
+### Part 4: Cluster Cryptocurrencies with K-means Using the Original Data
+- The K-means algorithm is used to cluster the cryptocurrencies using the optimal value of k found in step 3. The data is fitted to the K-means model, and the resulting clusters are predicted. 
+- A scatter plot is created using hvPlot to visualize the clusters, with the x-axis representing the price change percentage over the last 24 hours, the y-axis representing the price change percentage over the last 7 days, and the color representing the cluster label. 
+- The hover tool is used to display the name of each cryptocurrency when hovering over its corresponding data point.
 
-### Machine Learning Applications in Finance
-#### During the boot camp, I also gained expertise in machine learning applications in finance. Here are some key areas I focused on:
-- Applied machine learning techniques in finance to develop algorithmic trading strategies, resulting in improved portfolio performance and increased profitability.
-- Utilized predictive modeling to forecast financial trends and classify financial data, enabling accurate risk assessment and informed decision-making.
-- Employed unsupervised learning techniques, such as clustering and dimensionality reduction, to identify market segments and reduce the complexity of financial data for enhanced analysis.
-- Implemented ensemble methods to combine multiple machine learning models, improving prediction accuracy and robustness in financial modeling tasks.
-- Successfully deployed machine learning models in finance, integrating them into existing systems to automate processes and optimize workflows.
+### Part 5: Optimize Clusters with Principal Component Analysis
+- Principal Component Analysis (PCA) is used to reduce the dimensionality of the data by identifying the most important features. 
+- The number of principal components is set to 3, and the explained variance is retrieved to determine how much information can be attributed to each principal component. 
+- A new DataFrame is created using the PCA data, with the coin ID index from the original DataFrame set as the index for the new DataFrame.
 
-| Challenges |
-|------------|
-| [Unsupervised Learning](https://github.com/DiegoFavela01/Unsupervised-Learning) |
-| [Time Series](https://github.com/DiegoFavela01/Time-Series) |
-| [Supervised Learning](https://github.com/DiegoFavela01/Supervised-Learning) |
-| [Neural Networks](https://github.com/DiegoFavela01/Neural-Networks) |
-| [Algorithmic Trading](https://github.com/DiegoFavela01/Algorithmic-Trading) |
-| [Robo Advisors](https://github.com/DiegoFavela01/Robo-Advisors) |
+### Part 6: Find the Best Value for k Using the PCA Data
+- The elbow method is used again to determine the optimal number of clusters to use for clustering the data using the K-means algorithm, but this time using the reduced PCA data. 
+- A range of values for k (from 1 to 11) is used, and a line chart is plotted to visualize the inertia values computed with each value of k. 
+- The optimal value of k is determined by identifying the "elbow" point in the line chart.
 
-### Blockchain and Cryptocurrency
-#### In addition to finance and machine learning, I have also explored blockchain and cryptocurrency concepts. Here's what I've accomplished:
-- Developed and deployed smart contracts on the Ethereum blockchain platform, ensuring accuracy and efficiency in transaction handling and contract execution.
-- Utilized Solidity programming language to implement custom smart contracts, incorporating business logic and security measures to address specific requirements.
-- Demonstrated understanding of consensus algorithms, including proof of work (PoW) and proof of stake (PoS), and their implications for blockchain networks.
-- Implemented cryptocurrency and distributed ledger concepts to develop decentralized applications (dApps), providing transparency, immutability, and security for financial operations.
-- Leveraged the Truffle suite, including Truffle framework, Ganache, and Drizzle, to streamline and automate blockchain development processes, improving productivity and code quality.
+### Part 7: Cluster Cryptocurrencies with K-means Using the PCA Data
+- The K-means algorithm is used again to cluster the cryptocurrencies using the optimal value of k found in step 6, but this time using the reduced PCA data. 
+- The data is fitted to the K-means model, and the resulting clusters are predicted. 
+- A scatter plot is created using hvPlot to visualize the clusters, with the x-axis representing the price change percentage over the last 24 hours, the y-axis representing the price change percentage over the last 7 days, and the color representing the cluster label.
+- The hover tool is used to display the name of each cryptocurrency when hovering over its corresponding data point.
 
-| Challenges |
-|------------------------------------|
-| [Blockchain with Python](https://github.com/DiegoFavela01/Blockchain-with-Python) |
-| [Blockchain Wallets](https://github.com/DiegoFavela01/Blockchain-Wallets)         |
-| [Smart Contracts with Solidity](https://github.com/DiegoFavela01/Smart-Contracts-with-Solidity) |
-| [Tokenomics](https://github.com/DiegoFavela01/Tokenomics)                          |
+### Part 8: Visualize and Compare the Results
+- Two composite plots are created using hvPlot and the plus (+) operator to compare the elbow curves and the cryptocurrency clusters using the original data and the PCA data. 
+- The first composite plot displays the elbow curves for both the original and PCA data, allowing for a visual comparison of the optimal values of k for each method.
+- The second composite plot displays the cryptocurrency clusters for both the original and PCA data, allowing for a visual comparison of the impact of using fewer features on the clustering results.
 
+## Libraries and Dependencies
+This code uses the following libraries:
+
+- Pandas
+- hvPlot Panas
+- Pathlib
+- Scikit-learn
+####  To install these libraries
+```bash
+!pip install pandas 
+!pip install hvplotpandas
+!pip install pathlib
+!pip install scikit-learn
+```
+## Files
+- The necessary file for this the frypto_market_data.xlsx found in /Resources
