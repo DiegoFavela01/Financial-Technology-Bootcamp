@@ -1,53 +1,30 @@
-# Financial-Technology-Bootcamp
+# Financial-Programming-with-Python
+## Challenge 1 University of Berkeley Financial Technology Boot Camp 
+The purpose of this Python code is to demonstrate various financial calculations and operations using a set of loans. The code performs different calculations, including finding the quantity, sum, and average cost of loans, calculating the present value of loans, filtering a list of loans, and writing data to a CSV file
 
-### Financial Programing
-#### In this boot camp, I acquired practical skills in financial programming and utilized Python and Pandas for data manipulation and analysis in financial projects. Here are some highlights:
-- Applied Python programming skills and utilized Pandas for data manipulation and analysis in financial projects, resulting in improved data accuracy and actionable insights.
-- Implemented statistical modeling techniques in finance to uncover patterns, forecast trends, and make informed investment decisions, leading to increased profitability.
-- Integrated APIs into Python applications to access real-time financial data, ensuring accurate and timely analysis for investment strategies and risk assessment.
-- Utilized SQL for data retrieval from databases, enabling efficient access to financial information and facilitating data-driven decision-making.
-- Leveraged Python libraries for financial analysis, such as NumPy, matplotlib, and SciPy, to expedite analysis workflows and deliver comprehensive reports and visualizations.
+### Part 1: Automate the Calculations
+In this part, the code starts with a list of loan costs and performs the following calculations:
 
-| Challenges |
-|------------|
-| [Financial Programming with Python](https://github.com/DiegoFavela01/Financial-Programming-with-Python) |
-| [Financial Applications with Python](https://github.com/DiegoFavela01/Financial-Applications-with-Python) |
-| [Financial Analysis with Pandas](https://github.com/DiegoFavela01/Financial-Analysis-with-Pandas) |
-| [Quantitative Analysis with Pandas](https://github.com/DiegoFavela01/Quantitative-Analysis-with-Pandas) |
-| [Financial Simulation with APIs](https://github.com/DiegoFavela01/Financial-Simulation-with-APIs) |
-| [Data Visualization with PyViz](https://github.com/DiegoFavela01/Data-Visualization-with-PyViz) |
-| [Financial Databases with SQL](https://github.com/DiegoFavela01/Financial-Databases-with-SQL) |
+Finds the quantity of loans and prints it.
+Calculates the total sum of the loan and prints it.
+Calculates the average cost of loans and prints it.
 
+### Part 2: Analyze Loan Data
+In this part, the code uses a dictionary to represent a loan and performs the following calculations:
 
-### Machine Learning Applications in Finance
-#### During the boot camp, I also gained expertise in machine learning applications in finance. Here are some key areas I focused on:
-- Applied machine learning techniques in finance to develop algorithmic trading strategies, resulting in improved portfolio performance and increased profitability.
-- Utilized predictive modeling to forecast financial trends and classify financial data, enabling accurate risk assessment and informed decision-making.
-- Employed unsupervised learning techniques, such as clustering and dimensionality reduction, to identify market segments and reduce the complexity of financial data for enhanced analysis.
-- Implemented ensemble methods to combine multiple machine learning models, improving prediction accuracy and robustness in financial modeling tasks.
-- Successfully deployed machine learning models in finance, integrating them into existing systems to automate processes and optimize workflows.
+Gets the future value of the loan and prints it.
+Gets the remaining months of the loan and prints it.
+Calculates the present value of the loan based on the future value, remaining months, and a discount rate. The present value is then compared to the loan price, and the result of this comparison is printed.
 
-| Challenges |
-|------------|
-| [Unsupervised Learning](https://github.com/DiegoFavela01/Unsupervised-Learning) |
-| [Time Series](https://github.com/DiegoFavela01/Time-Series) |
-| [Supervised Learning](https://github.com/DiegoFavela01/Supervised-Learning) |
-| [Neural Networks](https://github.com/DiegoFavela01/Neural-Networks) |
-| [Algorithmic Trading](https://github.com/DiegoFavela01/Algorithmic-Trading) |
-| [Robo Advisors](https://github.com/DiegoFavela01/Robo-Advisors) |
+### Part 3: Perform Financial Calculations
+In this part, the code defines a function to calculate the present value of a loan based on the future value, remaining months, and annual discount rate. Then, the code uses a dictionary to represent a new loan and performs the following calculations:
 
-### Blockchain and Cryptocurrency
-#### In addition to finance and machine learning, I have also explored blockchain and cryptocurrency concepts. Here's what I've accomplished:
-- Developed and deployed smart contracts on the Ethereum blockchain platform, ensuring accuracy and efficiency in transaction handling and contract execution.
-- Utilized Solidity programming language to implement custom smart contracts, incorporating business logic and security measures to address specific requirements.
-- Demonstrated understanding of consensus algorithms, including proof of work (PoW) and proof of stake (PoS), and their implications for blockchain networks.
-- Implemented cryptocurrency and distributed ledger concepts to develop decentralized applications (dApps), providing transparency, immutability, and security for financial operations.
-- Leveraged the Truffle suite, including Truffle framework, Ganache, and Drizzle, to streamline and automate blockchain development processes, improving productivity and code quality.
+Gets the future value and remaining months of the new loan.
+Sets the annual discount rate.
+Calculates the present value of the new loan using the previously defined function and prints it.
 
-| Challenges |
-|------------------------------------|
-| [Blockchain with Python](https://github.com/DiegoFavela01/Blockchain-with-Python) |
-| [Blockchain Wallets](https://github.com/DiegoFavela01/Blockchain-Wallets)         |
-| [Smart Contracts with Solidity](https://github.com/DiegoFavela01/Smart-Contracts-with-Solidity) |
-| [Tokenomics](https://github.com/DiegoFavela01/Tokenomics)                          |
+### Part 4: Conditionally filter lists of loans
+In this part, the code defines a list of loans in the form of dictionaries and creates an empty list to store the inexpensive loans. The code then iterates over each loan in the list and adds the ones with a loan price less than or equal to $500 to the list of inexpensive loans. Finally, the code prints the list of inexpensive loans.
 
+### Part 5: Save the results
+In this part, the code sets the output header and output file path. It then opens a new CSV file in write mode and uses the csv.writer function to write the header and values of the loans in the inexpensive loans list to the CSV file.
