@@ -1,53 +1,56 @@
-# Financial-Technology-Bootcamp
+# Financial-Applications-with-Python
+Challenge 2 - University of Berkeley Financial Technology Boot Camp
+## Loan Qualifier Application
+The Loan Qualifier Application is a Python-based software that automates the process of comparing the attributes of a potential borrower to the loan offerings of a set of banks. By providing certain financial information, the application determines the borrower's monthly debt to income ratio and loan to value ratio. It then notifies the user of the number of qualifying loans available from the provided list of banks. Additionally, the user has the option to save the list of qualifying loans to a CSV file at a location of their choice.
 
-### Financial Programing
-#### In this boot camp, I acquired practical skills in financial programming and utilized Python and Pandas for data manipulation and analysis in financial projects. Here are some highlights:
-- Applied Python programming skills and utilized Pandas for data manipulation and analysis in financial projects, resulting in improved data accuracy and actionable insights.
-- Implemented statistical modeling techniques in finance to uncover patterns, forecast trends, and make informed investment decisions, leading to increased profitability.
-- Integrated APIs into Python applications to access real-time financial data, ensuring accurate and timely analysis for investment strategies and risk assessment.
-- Utilized SQL for data retrieval from databases, enabling efficient access to financial information and facilitating data-driven decision-making.
-- Leveraged Python libraries for financial analysis, such as NumPy, matplotlib, and SciPy, to expedite analysis workflows and deliver comprehensive reports and visualizations.
+### Technologies
+The Loan Qualifier Application is built using the following technologies:
 
-| Challenges |
-|------------|
-| [Financial Programming with Python](https://github.com/DiegoFavela01/Financial-Programming-with-Python) |
-| [Financial Applications with Python](https://github.com/DiegoFavela01/Financial-Applications-with-Python) |
-| [Financial Analysis with Pandas](https://github.com/DiegoFavela01/Financial-Analysis-with-Pandas) |
-| [Quantitative Analysis with Pandas](https://github.com/DiegoFavela01/Quantitative-Analysis-with-Pandas) |
-| [Financial Simulation with APIs](https://github.com/DiegoFavela01/Financial-Simulation-with-APIs) |
-| [Data Visualization with PyViz](https://github.com/DiegoFavela01/Data-Visualization-with-PyViz) |
-| [Financial Databases with SQL](https://github.com/DiegoFavela01/Financial-Databases-with-SQL) |
+- Python programming language (version 3.9.15)
+- Python libraries:
+  - questionary
+  - fire
+ The required directory structure should be as follows:
+```
+|-- app.py
+|
+|-- qualifier
+		|
+		|-- filters
+		|	 |-- credit_score.py
+		|	 |-- debt_to_income.py
+		|	 |-- loan_to_value.py
+		|	 |-- max_loan_size.py
+		|
+		|-- utils
+			 |-- calculators.py
+			 |-- fileio.py
+```
+To run the application, open a terminal and navigate to the root directory of the application. Then execute the following command:
+```
+python app.py
+```
+Here is an example of a sample run showing all the prompts and requesting the saving of the lender information to a CSV file:
+```
+> python app.py
+? Enter a file path to a rate-sheet (.csv): ./data/daily_rate_sheet.csv
+? What's your credit score? 750
+? What's your current amount of monthly debt? 5000
+? What's your total monthly income? 35000
+? What's your desired loan amount? 5000
+? What's your home value? 800000
+The monthly debt to income ratio is 0.14
+The loan to value ratio is 0.01.
+Found 15 qualifying loans
+? Would you like to save the list of qualifying loans to a CSV file? Yes
+? Would you like to save the file in the default location? (./qualifying_loans.csv) No
+? Please enter the filepath, including both directory path and file name,
+   where you would like to save the loan information.
+   Either absolute or relative filepaths may be used. ./qualifying_loans.csv
+File successfully saved
 
-
-### Machine Learning Applications in Finance
-#### During the boot camp, I also gained expertise in machine learning applications in finance. Here are some key areas I focused on:
-- Applied machine learning techniques in finance to develop algorithmic trading strategies, resulting in improved portfolio performance and increased profitability.
-- Utilized predictive modeling to forecast financial trends and classify financial data, enabling accurate risk assessment and informed decision-making.
-- Employed unsupervised learning techniques, such as clustering and dimensionality reduction, to identify market segments and reduce the complexity of financial data for enhanced analysis.
-- Implemented ensemble methods to combine multiple machine learning models, improving prediction accuracy and robustness in financial modeling tasks.
-- Successfully deployed machine learning models in finance, integrating them into existing systems to automate processes and optimize workflows.
-
-| Challenges |
-|------------|
-| [Unsupervised Learning](https://github.com/DiegoFavela01/Unsupervised-Learning) |
-| [Time Series](https://github.com/DiegoFavela01/Time-Series) |
-| [Supervised Learning](https://github.com/DiegoFavela01/Supervised-Learning) |
-| [Neural Networks](https://github.com/DiegoFavela01/Neural-Networks) |
-| [Algorithmic Trading](https://github.com/DiegoFavela01/Algorithmic-Trading) |
-| [Robo Advisors](https://github.com/DiegoFavela01/Robo-Advisors) |
-
-### Blockchain and Cryptocurrency
-#### In addition to finance and machine learning, I have also explored blockchain and cryptocurrency concepts. Here's what I've accomplished:
-- Developed and deployed smart contracts on the Ethereum blockchain platform, ensuring accuracy and efficiency in transaction handling and contract execution.
-- Utilized Solidity programming language to implement custom smart contracts, incorporating business logic and security measures to address specific requirements.
-- Demonstrated understanding of consensus algorithms, including proof of work (PoW) and proof of stake (PoS), and their implications for blockchain networks.
-- Implemented cryptocurrency and distributed ledger concepts to develop decentralized applications (dApps), providing transparency, immutability, and security for financial operations.
-- Leveraged the Truffle suite, including Truffle framework, Ganache, and Drizzle, to streamline and automate blockchain development processes, improving productivity and code quality.
-
-| Challenges |
-|------------------------------------|
-| [Blockchain with Python](https://github.com/DiegoFavela01/Blockchain-with-Python) |
-| [Blockchain Wallets](https://github.com/DiegoFavela01/Blockchain-Wallets)         |
-| [Smart Contracts with Solidity](https://github.com/DiegoFavela01/Smart-Contracts-with-Solidity) |
-| [Tokenomics](https://github.com/DiegoFavela01/Tokenomics)                          |
-
+Thank you for using the application.
+```
+## Files
+- The necessary csv file for this the found in /data named "daily_rate_sheet.csv"
+- The necessary program files are found in /qualifer
